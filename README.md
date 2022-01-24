@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+### What are we building?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- l3ms: a little, light, learning management system.
 
-## Available Scripts
+### Technically:
 
-In the project directory, you can run:
+- reactjs with Jest for testing
+- Supabase api
+- MUI 5.0 with styled components
 
-### `npm start`
+### Philosophy:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- build using standards, iterate to preferences
+- mark what we don't know, learn about it, then knowledge-share
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Requirements
 
-### `npm test`
+0. single page drill-down & modal driven UI
+1. Login with magic link: one session at a time per link.
+2. markdown driven blog roll
+3. events driven by a static file with a countdown
+4. modules containing: content, checklist, progress, workspaces, Q&A db w/upvotes
+5. workspace: your l3ms dashboard (progress, latest)
+6. i8n: interntionalization
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Roadmap
+| Target | Feature |
+| :--- | :----------- |
+| Sprint 0 | Initial structure, Auth + pre-registration |
+| Sprint 1 | blog & events |
+| Sprint 2 | modules & auth |
+| Sprint 3 | results page with recommednations |
+| Sprint 4 | resources + private coffee w/ peers & mentors |
+| Sprint 5 | books + content releases, resource updates, moderation of forums on each module |
 
-### `npm run build`
+### Libraries
+| Library | Features |
+| :--- | :----------- |
+| Supabase | auth, users, storage, registration: modules, events, Q&A, workspaces (& todos) |
+| react-markdown | blog + courses (content + resources) |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Unknowns:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ORM for API calls. Is there a wrapper for useEffect API calls
+- events: countdown?
+- chat: Asynchronous communications (inbox style)
