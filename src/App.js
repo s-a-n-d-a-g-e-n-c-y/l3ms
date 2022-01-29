@@ -39,7 +39,7 @@ const Secondary = styled(Main)`
 const Containers = styled(Container)`
   background: ${SecondaryColor};
   height: 100%;
-  overflow: scroll;
+  overflow-y: auto;
 `;
 
 //ex. this can come from an API

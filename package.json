@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fontsource/roboto": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@fontsource/roboto": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
     "@mui/styled-engine-sc": "latest",
