@@ -1,4 +1,3 @@
-/* eslint-disable react/no-children-prop */
 import "./App.css";
 import React from "react";
 import { styled } from "@mui/material/styles";
@@ -49,11 +48,6 @@ const datasource = [1, 2, 3, 4, 5];
 const mockdata = ["one", "two", "three", "four", "five"];
 
 // function to call DataList component with data prop. Returns mockdata if data is missing
-// let loadedList = (props) => DataList(props ? {data: props.data} : {data: datasource});
-
-// let loadedList = (props) =>
-  // DataList(props ? { data: props.data } : { data: mockdata });
-
 const LoadedList = ({data, ...props}) => <DataList data={data || mockdata} {... props} />
 
 function App() {
@@ -62,13 +56,18 @@ function App() {
       <Main>
         <LoadedList />
         <LoadedList data={datasource} />
-        <Containers children={<LoadedList />} />
+        <Containers>
+          <LoadedList />
+        </Containers>
+
       </Main>
       <Secondary>
         <DataList />
         <DataList data={null} />
         <DataList data={""} />
-        <Containers children={<DataList data={datasource} />} />
+        <Containers>
+          <DataList datal={datasource} />
+        </Containers>
       </Secondary>
     </Platform>
   );
