@@ -6,6 +6,7 @@ import { grey } from "@mui/material/colors";
 
 //absolute pathnames, see jsconfig.json
 import DataList from "components/dataList";
+import Navigation from "components/navigation";
 
 //theme can use themeprovider
 const PrimaryColor = grey[200];
@@ -53,6 +54,7 @@ const LoadedList = ({data, ...props}) => <DataList data={data || mockdata} {... 
 function App() {
   return (
     <Platform>
+      <Navigation />
       <Main>
         <LoadedList />
         <LoadedList data={datasource} />

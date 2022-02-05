@@ -7,7 +7,6 @@ const ListofData = styled.ul`
 `;
 
 function DataList(props) {
-
   // this does not work if props.data is not defined.
   // const data = props.data;
 
