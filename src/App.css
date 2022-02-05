@@ -1,3 +1,21 @@
 html, body, #root, .App {
   height: 100%;
 }
+
+body * {
+  scrollbar-width: thin;
+  overflow-x: hidden;
+  scrollbar-color: #e2e2e2 #f7f7f7;
+} 
+
+body * 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f7f7f7;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #e2e2e2; 
+}
+::-webkit-scrollbar-button {
+  background-color: #f7f7f7;
+}

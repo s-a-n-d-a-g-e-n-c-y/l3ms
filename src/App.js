@@ -1,4 +1,6 @@
+/* eslint-disable react/no-children-prop */
 import "./App.css";
+import React from "react";
 import { styled } from "@mui/material/styles";
 import { Box, Container } from "@mui/material";
 import { grey } from "@mui/material/colors";
@@ -39,22 +41,34 @@ const Secondary = styled(Main)`
 const Containers = styled(Container)`
   background: ${SecondaryColor};
   height: 100%;
-  overflow: scroll;
+  overflow-y: auto;
 `;
 
 //ex. this can come from an API
 const datasource = [1, 2, 3, 4, 5];
+const mockdata = ["one", "two", "three", "four", "five"];
+
+// function to call DataList component with data prop. Returns mockdata if data is missing
+// let loadedList = (props) => DataList(props ? {data: props.data} : {data: datasource});
+
+// let loadedList = (props) =>
+  // DataList(props ? { data: props.data } : { data: mockdata });
+
+const LoadedList = ({data, ...props}) => <DataList data={data || mockdata} {... props} />
 
 function App() {
   return (
     <Platform>
       <Main>
-        <DataList data={datasource} />
-        <Containers children={<DataList data={datasource} />} />
+        <LoadedList />
+        <LoadedList data={datasource} />
+        <Containers children={<LoadedList />} />
       </Main>
       <Secondary>
-        <DataList data={datasource} />
-        <Containers className="containers" children={<DataList data={datasource} />} />
+        <DataList />
+        <DataList data={null} />
+        <DataList data={""} />
+        <Containers children={<DataList data={datasource} />} />
       </Secondary>
     </Platform>
   );
