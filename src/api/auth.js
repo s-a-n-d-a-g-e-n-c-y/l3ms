@@ -19,12 +19,20 @@ export default function Auth() {
     }
   };
 
+  // TODO: bring the above into these functions below.
+  // async function signInWithEmail() {
+  //   const { user, session, error } = await supabase.auth.signIn({
+  //     email,
+  //   });
+  // }
+  //
+  // async function signOut() {
+  //   const { error } = await supabase.auth.signOut();
+  // }
+
   return (
     <div>
-      <h1 className="header">Supabase + React</h1>
-      <p className="description">
-        Sign in via magic link with your email below
-      </p>
+      <p className="description">Request a Magic Link to log-in to l3ms.</p>
       <input
         className="inputField"
         type="email"
