@@ -26,8 +26,8 @@
 ### Roadmap
 | Target | Feature |
 | :--- | :----------- |
-| Sprint 0 | Initial structure, Auth + pre-registration |
-| Sprint 1 | blog & events |
+| Sprint 0 | <s>Initial structure, Auth + pre-registration</s> | - Done!
+| Sprint 1 | blog & events | - in Progress
 | Sprint 2 | modules & auth |
 | Sprint 3 | results page with recommednations |
 | Sprint 4 | resources + private coffee w/ peers & mentors |
