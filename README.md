@@ -1,6 +1,7 @@
 ### What are we building?
 
 - l3ms: a little, light, learning management system.
+- this project is now hosted on https://l3ms.org
 
 ### Technically:
 
