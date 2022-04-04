@@ -7,6 +7,7 @@ import { grey } from "@mui/material/colors";
 //absolute pathnames, see jsconfig.json
 import DataList from "components/dataList";
 import Navigation from "components/navigation";
+import Writer from "components/newletter";
 
 //theme can use themeprovider
 const PrimaryColor = grey[200];
@@ -40,6 +41,7 @@ const Secondary = styled(Main)`
 
 const Containers = styled(Container)`
   background: ${SecondaryColor};
+  padding: 20px;
   height: 100%;
   overflow-y: auto;
 `;
@@ -59,6 +61,7 @@ function App() {
         <LoadedList />
         <LoadedList data={datasource} />
         <Containers>
+          <Writer />
           <LoadedList />
         </Containers>
 
