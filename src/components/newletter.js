@@ -20,8 +20,6 @@ const getValue = () => {
   return "Start typing in L3ms...";
 };
 
-// Figure out how to pass current logged in user id to "user" instead of "hello"
-
 async function writeValue(content, userid) {
   console.log("I'm in async" + userid);
   console.log(content);

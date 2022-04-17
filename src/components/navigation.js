@@ -21,6 +21,7 @@ function Navigation() {
 
   useEffect(() => {
     const session = supabase.auth.session();
+
     setSession(session);
     setUser(session?.user ?? null);
 
