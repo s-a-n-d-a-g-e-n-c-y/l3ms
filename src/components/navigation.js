@@ -3,7 +3,7 @@ import styled from "styled-components";
 import DataList from "./dataList";
 import Auth from "api/auth";
 import { supabase } from "api/supabaseClient";
-// import { setupSession } from "./api";
+// import { setupSession } from "components/session";
 
 const Nav = styled.div`
   background: ${(props) => props.theme.primary};

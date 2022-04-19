@@ -7,7 +7,8 @@ import { grey } from "@mui/material/colors";
 //absolute pathnames, see jsconfig.json
 import DataList from "components/dataList";
 import Navigation from "components/navigation";
-import Writer from "components/newletter";
+import Writer from "components/editor";
+import Newsletters from "components/newletters";
 
 //theme can use themeprovider
 const PrimaryColor = grey[200];
@@ -51,7 +52,9 @@ const datasource = [1, 2, 3, 4, 5];
 const mockdata = ["one", "two", "three", "four", "five"];
 
 // function to call DataList component with data prop. Returns mockdata if data is missing
-const LoadedList = ({data, ...props}) => <DataList data={data || mockdata} {... props} />
+const LoadedList = ({ data, ...props }) => (
+  <DataList data={data || mockdata} {...props} />
+);
 
 function App() {
   return (
@@ -61,10 +64,9 @@ function App() {
         <LoadedList />
         <LoadedList data={datasource} />
         <Containers>
+          <Newsletters />
           <Writer />
-          <LoadedList />
         </Containers>
-
       </Main>
       <Secondary>
         <DataList />

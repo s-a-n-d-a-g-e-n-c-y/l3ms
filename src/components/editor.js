@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Editor } from "@tinymce/tinymce-react";
-// import { supabase } from "api/supabaseClient";
-// import { DoDisturbOff } from "@mui/icons-material";
-import { Button } from "@mui/material";
 import styled from "styled-components";
+import { Editor } from "@tinymce/tinymce-react";
 import { supabase } from "api/supabaseClient";
+import { Button } from "@mui/material";
 
 const SaveButton = styled(Button)`
   margin-top: 20px !important;
@@ -37,10 +35,9 @@ async function writeValue(content, userid) {
 }
 
 function Writer() {
-  // writer functinos
-  console.log(process.env);
   const [session, setSession] = useState(supabase.auth.session() || "");
   const [user, setUser] = useState(session ? session.user : "");
+  const [value, setValue] = useState("");
   
   // console.log("session?" + session.user.id);
   // console.log("email?" + user.email);
@@ -48,11 +45,9 @@ function Writer() {
   // console.log("supabase?" + supabase.session);
 
   const initialValue = getValue();
-  const [value, setValue] = useState(initialValue ? initialValue : "");
-
+  console.log("writer value:" + value);
   // useEffect(() => setValue(initialValue ?? ""), [initialValue]);
 
-  console.log("writer value:" + value);
 
   return (
     <div>
@@ -67,9 +62,3 @@ function Writer() {
   );
 }
 export default Writer;
-
-// Notes:
-//// save a new entry to the api
-//// set initial newsletter value from api (load a single newsletter)
-//// check permissions & secure entries or edits from non-owners
-////
